@@ -3,8 +3,8 @@ devtools::load_all()
 
 p <- ggplot(mtcars, aes(wt, mpg)) +
   geom_stitch(size = 4, stroke = 1) +
-  labs(title = "Every stitch a small act",
-    subtitle = "Red thread. White cloth. Belarus.",
+  labs(title = "Fuel economy and vehicle weight",
+    subtitle = "1974 Motor Trend road tests",
     x = "Weight (1,000 lb)", y = "Miles per gallon",
     caption = "ggbelarus / demonstration data: mtcars") +
   theme_belarus()
@@ -13,7 +13,9 @@ ggsave("man/figures/stitches.png", p, width = 8, height = 6,
 
 p <- ggplot(mtcars, aes(factor(cyl))) +
   geom_bar(width = 0.75) +
-  labs(title = "White / red / white", x = "Cylinders", y = "Cars") +
+  labs(title = "Cars by cylinder count",
+    subtitle = "1974 Motor Trend road tests",
+    x = "Cylinders", y = "Cars") +
   theme_belarus()
 ggsave("man/figures/bars.png", p, width = 7, height = 5,
   dpi = 160, device = ragg::agg_png, bg = "white")
@@ -21,7 +23,9 @@ ggsave("man/figures/bars.png", p, width = 7, height = 5,
 p <- ggplot(mtcars, aes(wt, mpg)) +
   geom_stitch(size = 3) +
   facet_wrap(vars(cyl), nrow = 1) +
-  labs(title = "A pattern that repeats", x = "Weight", y = "Miles per gallon") +
+  labs(title = "Fuel economy and weight by cylinder count",
+    subtitle = "1974 Motor Trend road tests",
+    x = "Weight", y = "Miles per gallon") +
   theme_belarus(base_size = 11)
 ggsave("man/figures/facets.png", p, width = 10, height = 5,
   dpi = 160, device = ragg::agg_png, bg = "white")
