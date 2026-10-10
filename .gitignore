@@ -1,0 +1,9 @@
+.Rhistory
+.RData
+.Rproj.user/
+*.Rcheck/
+*.tar.gz
+.Rproj.user
+.httr-oauth
+.DS_Store
+.quarto

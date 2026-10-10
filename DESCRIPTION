@@ -1,0 +1,17 @@
+Package: ggbelarus
+Title: Red and White Cross-Stitch for ggplot2
+Version: 0.0.0.9000
+Authors@R: person("David", "Hugh-Jones", email = "davidhughjones@gmail.com",
+    role = c("aut", "cre"))
+Description: A Belarusian embroidery-inspired ggplot2 theme and stitch points.
+Depends: R (>= 4.2.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Imports: 
+    ggplot2 (>= 4.0.0),
+    grid
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Config/roxygen2/version: 8.1.0
