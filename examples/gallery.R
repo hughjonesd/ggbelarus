@@ -20,12 +20,12 @@ p <- ggplot(mtcars, aes(factor(cyl))) +
 ggsave("man/figures/bars.png", p, width = 7, height = 5,
   dpi = 160, device = ragg::agg_png, bg = "white")
 
-p <- ggplot(mtcars, aes(wt, mpg)) +
-  geom_stitch(size = 3) +
-  facet_wrap(vars(cyl), nrow = 1) +
-  labs(title = "Fuel economy and weight by cylinder count",
-    subtitle = "1974 Motor Trend road tests",
-    x = "Weight", y = "Miles per gallon") +
+p <- ggplot(palmerpenguins::penguins, aes(bill_length_mm, bill_depth_mm)) +
+  geom_stitch(size = 3, na.rm = TRUE) +
+  facet_wrap(vars(species), nrow = 1) +
+  labs(title = "Penguin bills by species",
+    subtitle = "Palmer Archipelago, Antarctica",
+    x = "Bill length (mm)", y = "Bill depth (mm)") +
   theme_belarus(base_size = 11)
 ggsave("man/figures/facets.png", p, width = 10, height = 5,
   dpi = 160, device = ragg::agg_png, bg = "white")
